@@ -1,0 +1,60 @@
+# ----------------------------
+# Node.js
+# ----------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ----------------------------
+# Environment
+# ----------------------------
+.env
+.env.local
+.env.*.local
+
+# ----------------------------
+# Logs
+# ----------------------------
+logs
+*.log
+logs/*.log
+
+# ----------------------------
+# Build outputs
+# ----------------------------
+dist/
+build/
+out/
+
+# React / React Native
+.expo/
+.expo-shared/
+*.iml
+
+# Если фронтенд (client) собирается
+client/build/
+client/dist/
+
+# Если бэкенд (server) собирается
+server/build/
+server/dist/
+
+# ----------------------------
+# TypeScript
+# ----------------------------
+*.tsbuildinfo
+
+# ----------------------------
+# Misc cache
+# ----------------------------
+.cache/
+
+# ----------------------------
+# IDE / OS files
+# ----------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
