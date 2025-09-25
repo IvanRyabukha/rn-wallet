@@ -28,16 +28,27 @@ dist/
 build/
 out/
 
+# ----------------------------
 # React / React Native
 .expo/
 .expo-shared/
 *.iml
 
-# Если фронтенд (client) собирается
+# --- client (React Native app) ---
+client/node_modules/
+client/android/.gradle/
+client/android/app/build/
+client/android/build/
+client/ios/build/
+client/.bundle/
+client/.watchmanconfig
+client/.expo/
+client/.expo-shared/
 client/build/
 client/dist/
 
-# Если бэкенд (server) собирается
+# --- server (backend) ---
+server/node_modules/
 server/build/
 server/dist/
 
