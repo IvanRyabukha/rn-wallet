@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "rnworklets_autolinked_build",
+		"source" : "F:/react-project/rn-wallet/client/node_modules/react-native-worklets/android/build/generated/source/codegen/jni"
+	}
+}

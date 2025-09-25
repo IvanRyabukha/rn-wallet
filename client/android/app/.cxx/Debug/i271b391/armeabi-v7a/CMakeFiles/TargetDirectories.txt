@@ -1,0 +1,15 @@
+F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/armeabi-v7a/CMakeFiles/appmodules.dir
+F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/armeabi-v7a/CMakeFiles/edit_cache.dir
+F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/armeabi-v7a/rnreanimated_autolinked_build/CMakeFiles/react_codegen_rnreanimated.dir
+F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/armeabi-v7a/rnreanimated_autolinked_build/CMakeFiles/edit_cache.dir
+F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/armeabi-v7a/rnreanimated_autolinked_build/CMakeFiles/rebuild_cache.dir
+F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/armeabi-v7a/safeareacontext_autolinked_build/CMakeFiles/react_codegen_safeareacontext.dir
+F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/armeabi-v7a/safeareacontext_autolinked_build/CMakeFiles/edit_cache.dir
+F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/armeabi-v7a/safeareacontext_autolinked_build/CMakeFiles/rebuild_cache.dir
+F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/armeabi-v7a/rnscreens_autolinked_build/CMakeFiles/react_codegen_rnscreens.dir
+F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/armeabi-v7a/rnscreens_autolinked_build/CMakeFiles/edit_cache.dir
+F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/armeabi-v7a/rnscreens_autolinked_build/CMakeFiles/rebuild_cache.dir
+F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/armeabi-v7a/rnworklets_autolinked_build/CMakeFiles/react_codegen_rnworklets.dir
+F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/armeabi-v7a/rnworklets_autolinked_build/CMakeFiles/edit_cache.dir
+F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/armeabi-v7a/rnworklets_autolinked_build/CMakeFiles/rebuild_cache.dir
