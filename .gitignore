@@ -69,3 +69,6 @@ server/dist/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Android debug key
+client/android/app/debug.keystore
