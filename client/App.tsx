@@ -1,11 +1,14 @@
-import { NavigationContainer } from "@react-navigation/native";
-import RootNavigation from "./src/navigation/RootNavigation";
+import { NavigationContainer } from '@react-navigation/native';
+import RootNavigation from '@navigation/RootNavigation';
+import { AuthProvider } from 'providers/AuthProvider';
 
 function App() {
   return (
-    <NavigationContainer>
-      <RootNavigation />
-    </NavigationContainer>
+    <AuthProvider>
+      <NavigationContainer>
+        <RootNavigation />
+      </NavigationContainer>
+    </AuthProvider>
   );
 }
 
