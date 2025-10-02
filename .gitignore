@@ -38,7 +38,9 @@ out/
 client/node_modules/
 client/android/.gradle/
 client/android/app/build/
+client/android/app/.cxx
 client/android/build/
+client/android/local.properties
 client/ios/build/
 client/.bundle/
 client/.watchmanconfig
@@ -69,3 +71,6 @@ server/dist/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Android debug key
+client/android/app/debug.keystore
