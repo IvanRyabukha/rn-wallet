@@ -1,6 +1,4 @@
 // lib/utils.js
-import { FirebaseAuthTypes } from '@react-native-firebase/auth';
-
 export function formatDate(dateString: string | number | Date) {
   // format date nicely
   // example: from this 👉 2025-05-20 to this 👉 May 20, 2025
@@ -11,4 +9,13 @@ export function formatDate(dateString: string | number | Date) {
     day: "numeric",
   });
 };
+
+export function isFirebaseAuthError(error: unknown): error is { code: string; message: string} {
+  return (
+    typeof error === 'object' &&
+    error !== null &&
+    "code" in error &&
+    "message" in error
+  );
+}
 

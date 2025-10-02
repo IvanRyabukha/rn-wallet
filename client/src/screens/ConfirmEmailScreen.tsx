@@ -1,11 +1,24 @@
-import { StyleSheet, Text, View, Alert, TouchableOpacity } from 'react-native';
+import {
+  Text,
+  View,
+  Alert,
+  TouchableOpacity,
+  ActivityIndicator,
+  Pressable,
+} from 'react-native';
 import React, { useState } from 'react';
 import { getAuth } from '@react-native-firebase/auth';
 import { useAuth } from 'providers/AuthProvider';
 
+import { COLORS } from '@constants/colors';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import { styles } from '../../assets/styles/auth.styles';
+import { isFirebaseAuthError } from '@lib/utils';
+
 const ConfirmEmailScreen = () => {
-  const [checking, setChecking] = useState(false);
   const { refreshUser } = useAuth();
+  const [checking, setChecking] = useState(false);
+  const [error, setError] = useState('');
 
   const checkVerification = async () => {
     try {
@@ -14,15 +27,17 @@ const ConfirmEmailScreen = () => {
       await getAuth().currentUser?.getIdToken(true);
       await refreshUser();
 
-
-
       if (getAuth().currentUser?.emailVerified) {
         Alert.alert('Email verified!');
       } else {
-        Alert.alert('Email not verified!');
+        setError('Email not verified!');
       }
     } catch (error) {
-      Alert.alert(err);
+      if (isFirebaseAuthError(error)) {
+        setError(error.message);
+      } else {
+        setError('Unknown error, please try againg');
+      }
     } finally {
       setChecking(false);
     }
@@ -34,18 +49,30 @@ const ConfirmEmailScreen = () => {
   };
 
   return (
-    <View>
-      <Text>Verify your email</Text>
-      <TouchableOpacity onPress={checkVerification}>
-        <Text>{checking ? 'Сhecking...' : 'Verify'}</Text>
+    <View style={styles.verificationContainer}>
+      <Text style={styles.verificationTitle}>Verify your email</Text>
+      {error ? (
+        <View style={styles.errorBox}>
+          <Ionicons name="alert-circle" size={20} color={COLORS.expense} />
+          <Text style={styles.errorText}>{error}</Text>
+          <TouchableOpacity onPress={() => setError('')}>
+            <Ionicons name="close" size={20} color={COLORS.textLight} />
+          </TouchableOpacity>
+        </View>
+      ) : null}
+
+      <TouchableOpacity onPress={checkVerification} style={styles.button}>
+        {checking ? (
+          <ActivityIndicator size={20} color={COLORS.white}/>
+        ) : (
+          <Text style={styles.buttonText}>{'Verify'}</Text>
+        )}
       </TouchableOpacity>
-      <TouchableOpacity onPress={resend}>
-        <Text>Resend</Text>
+      <TouchableOpacity onPress={resend} style={styles.button}>
+        <Text style={styles.buttonText}>Resend</Text>
       </TouchableOpacity>
     </View>
   );
 };
 
 export default ConfirmEmailScreen;
-
-const styles = StyleSheet.create({});

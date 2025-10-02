@@ -56,7 +56,7 @@ export const styles = StyleSheet.create({
   illustration: {
     height: 310,
     resizeMode: 'contain',
-    width: '100%',
+    width: 300,
   },
   input: {
     backgroundColor: COLORS.white,

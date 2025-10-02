@@ -47,6 +47,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/x86_64/rnreanimated_autolinked_build/cmake_install.cmake")
   include("F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/x86_64/safeareacontext_autolinked_build/cmake_install.cmake")
   include("F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/x86_64/rnscreens_autolinked_build/cmake_install.cmake")
+  include("F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/x86_64/RNVectorIconsSpec_autolinked_build/cmake_install.cmake")
   include("F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/x86_64/rnworklets_autolinked_build/cmake_install.cmake")
 
 endif()

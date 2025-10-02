@@ -18,32 +18,9 @@ const AuthNavigation = () => {
 
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      {!user ? (
-        <>
-          <Stack.Screen
-            name="Signin"
-            component={SigninScreen}
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen
-            name="Signup"
-            component={SignupScreen}
-            options={{ headerShown: false }}
-          />
-        </>
-      ) : !user.emailVerified ? (
-        <Stack.Screen
-          name="ConfirmEmail"
-          component={ConfirmEmailScreen}
-          options={{ headerShown: false }}
-        />
-      ) : (
-        <Stack.Screen
-          name="Signin"
-          component={SigninScreen}
-          options={{ headerShown: false }}
-        />
-      )}
+      <Stack.Screen name="Signin" component={SigninScreen} />
+      <Stack.Screen name="Signup" component={SignupScreen} />
+      <Stack.Screen name="ConfirmEmail" component={ConfirmEmailScreen} />
     </Stack.Navigator>
   );
 };

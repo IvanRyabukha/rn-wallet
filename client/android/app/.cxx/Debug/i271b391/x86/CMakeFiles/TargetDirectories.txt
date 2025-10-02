@@ -10,6 +10,9 @@ F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/x86/safeareaco
 F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/x86/rnscreens_autolinked_build/CMakeFiles/react_codegen_rnscreens.dir
 F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/x86/rnscreens_autolinked_build/CMakeFiles/edit_cache.dir
 F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/x86/rnscreens_autolinked_build/CMakeFiles/rebuild_cache.dir
+F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/x86/RNVectorIconsSpec_autolinked_build/CMakeFiles/react_codegen_RNVectorIconsSpec.dir
+F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/x86/RNVectorIconsSpec_autolinked_build/CMakeFiles/edit_cache.dir
+F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/x86/RNVectorIconsSpec_autolinked_build/CMakeFiles/rebuild_cache.dir
 F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/x86/rnworklets_autolinked_build/CMakeFiles/react_codegen_rnworklets.dir
 F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/x86/rnworklets_autolinked_build/CMakeFiles/edit_cache.dir
 F:/react-project/rn-wallet/client/android/app/.cxx/Debug/i271b391/x86/rnworklets_autolinked_build/CMakeFiles/rebuild_cache.dir

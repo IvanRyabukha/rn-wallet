@@ -8,11 +8,16 @@ import {
   TextInput,
   TouchableOpacity,
   Alert,
+  Image,
 } from 'react-native';
 import { AuthStackParamList } from '@navigation/AuthNavigation';
 import { getAuth } from '@react-native-firebase/auth';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 import { COLORS } from '@constants/colors';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import { styles } from '../../assets/styles/auth.styles';
+import { isFirebaseAuthError } from '@lib/utils';
 
 type SigninScreenNavigationProp = NativeStackNavigationProp<
   AuthStackParamList,
@@ -26,57 +31,88 @@ interface SigninScreenProps {
 const SigninScreen: React.FC<SigninScreenProps> = ({ navigation }) => {
   const [emailAddress, setEmailAddress] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
   const handleLogin = async () => {
     try {
-      const userCredential = await getAuth().signInWithEmailAndPassword(emailAddress, password);
+      const userCredential = await getAuth().signInWithEmailAndPassword(
+        emailAddress,
+        password,
+      );
       if (!userCredential.user?.emailVerified) {
         Alert.alert('Verifi your email!');
+
+        navigation.reset({
+          index: 1,
+          routes: [{ name: 'Signin' }, { name: 'ConfirmEmail' }],
+        });
+
+        return;
       }
     } catch (error) {
-      Alert.alert(error);
+      if (isFirebaseAuthError(error)) {
+        setError(error.message);
+      } else {
+        setError('Unknown error, please try againg');
+      }
     }
   };
 
   return (
-    <View>
-      <Text>Sign in</Text>
-      <TextInput
-        autoCapitalize="none"
-        value={emailAddress}
-        placeholder="Enter email"
-        onChangeText={emailAddress => setEmailAddress(emailAddress)}
-      />
-      <TextInput
-        value={password}
-        placeholder="Enter password"
-        secureTextEntry={true}
-        onChangeText={password => setPassword(password)}
-      />
-      <TouchableOpacity onPress={handleLogin}>
-        <Text>Continue</Text>
-      </TouchableOpacity>
-      <View style={{ display: 'flex', flexDirection: 'row', gap: 3 }}>
-        <Pressable onPress={() => navigation.navigate('Signup')}>
-          <Text>Sign up</Text>
-        </Pressable>
+    <KeyboardAwareScrollView
+      style={{ flex: 1 }}
+      contentContainerStyle={{ flexGrow: 1 }}
+      enableOnAndroid={true}
+      enableAutomaticScroll={true}
+    >
+      <View style={styles.container}>
+        <Image
+          source={require('../../assets/img/revenue-i4.png')}
+          style={styles.illustration}
+        />
+        <Text style={styles.title}>Welcome Back</Text>
+
+        {error ? (
+          <View style={styles.errorBox}>
+            <Ionicons name="alert-circle" size={20} color={COLORS.expense} />
+            <Text style={styles.errorText}>{error}</Text>
+            <TouchableOpacity onPress={() => setError('')}>
+              <Ionicons name="close" size={20} color={COLORS.textLight} />
+            </TouchableOpacity>
+          </View>
+        ) : null}
+
+        <TextInput
+          style={[styles.input, error && styles.errorInput]}
+          autoCapitalize="none"
+          value={emailAddress}
+          placeholderTextColor={'#9a8478'}
+          placeholder="Enter email"
+          onChangeText={email => setEmailAddress(email)}
+        />
+
+        <TextInput
+          style={[styles.input, error && styles.errorInput]}
+          value={password}
+          placeholder="Enter password"
+          placeholderTextColor={'#9a8478'}
+          secureTextEntry={true}
+          onChangeText={password => setPassword(password)}
+        />
+
+        <TouchableOpacity style={styles.button} onPress={handleLogin}>
+          <Text style={styles.buttonText}>Sign In</Text>
+        </TouchableOpacity>
+
+        <View style={styles.footerContainer}>
+          <Text style={styles.footerText}>Don&apos;t have an account?</Text>
+          <Pressable onPress={() => navigation.navigate('Signup')}>
+            <Text style={styles.linkText}>Sign Up</Text>
+          </Pressable>
+        </View>
       </View>
-    </View>
+    </KeyboardAwareScrollView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLORS.background,
-    padding: 15,
-  },
-  btn: {
-    borderWidth: 1,
-    borderColor: 'gray',
-    padding: 5,
-    marginTop: 10,
-  },
-});
 
 export default SigninScreen;

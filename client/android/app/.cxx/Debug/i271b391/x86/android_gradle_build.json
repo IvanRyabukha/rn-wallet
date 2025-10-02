@@ -3,6 +3,7 @@
     "F:\\react-project\\rn-wallet\\client\\node_modules\\react-native-reanimated\\android\\build\\generated\\source\\codegen\\jni\\CMakeLists.txt",
     "F:\\react-project\\rn-wallet\\client\\node_modules\\react-native-safe-area-context\\android\\src\\main\\jni\\CMakeLists.txt",
     "F:\\react-project\\rn-wallet\\client\\node_modules\\react-native-screens\\android\\src\\main\\jni\\CMakeLists.txt",
+    "F:\\react-project\\rn-wallet\\client\\node_modules\\react-native-vector-icons\\android\\build\\generated\\source\\codegen\\jni\\CMakeLists.txt",
     "F:\\react-project\\rn-wallet\\client\\node_modules\\react-native-worklets\\android\\build\\generated\\source\\codegen\\jni\\CMakeLists.txt",
     "F:\\react-project\\rn-wallet\\client\\node_modules\\react-native\\ReactAndroid\\cmake-utils\\default-app-setup\\CMakeLists.txt"
   ],
@@ -33,6 +34,11 @@
         "C:\\Users\\ryabu\\.gradle\\caches\\8.14.3\\transforms\\8e39abc90f3cd6c1cd7dfb6a9f5a8ff4\\transformed\\react-android-0.81.4-debug\\prefab\\modules\\jsi\\libs\\android.x86\\libjsi.so",
         "C:\\Users\\ryabu\\.gradle\\caches\\8.14.3\\transforms\\8e39abc90f3cd6c1cd7dfb6a9f5a8ff4\\transformed\\react-android-0.81.4-debug\\prefab\\modules\\reactnative\\libs\\android.x86\\libreactnative.so"
       ]
+    },
+    "react_codegen_RNVectorIconsSpec::@479809fae146501fd34d": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "react_codegen_RNVectorIconsSpec"
     },
     "react_codegen_rnreanimated::@8afabad14bfffa3f8b9a": {
       "toolchain": "toolchain",
