@@ -48,6 +48,7 @@ client/.expo/
 client/.expo-shared/
 client/build/
 client/dist/
+android/app/google-services.json
 
 # --- server (backend) ---
 server/node_modules/
