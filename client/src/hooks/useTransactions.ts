@@ -1,10 +1,12 @@
 // react custom hook file
 
+import { API_URL } from '@constants/api';
 import { useCallback, useState } from 'react';
 import { Alert } from 'react-native';
 
-//http://localhost:5001/api
-const API_URL = 'http://10.0.2.2:5001/api';
+// use deploy link to setup app in real devices
+// http://localhost:5001/api
+// const API_URL = 'http://10.0.2.2:5001/api';
 
 // fix userId undefined
 export const useTransactions = (userId: string | undefined) => {
@@ -53,9 +55,9 @@ export const useTransactions = (userId: string | undefined) => {
     }
   }, [fetchTransactions, fetchSummary, userId]);
 
-  const deleteTransaction = async () => {
+  const deleteTransaction = async (id: number) => {
     try {
-      const response = await fetch(`${API_URL}/transactions/${userId}`, { method: "DELETE" });
+      const response = await fetch(`${API_URL}/transactions/${id}`, { method: "DELETE" });
       if (!response.ok) {
         throw new Error("Failed to delete transaction");
       }

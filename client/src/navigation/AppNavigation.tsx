@@ -1,11 +1,11 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '@screens/HomeScreen';
-import NewTransactionScreen from '@screens/NewTransactionScreen';
+import CreateTransactionScreen from '@screens/CreateTransactionScreen';
 
 export type AppStackParamList = {
   Home: undefined;
-  NewTransaction: undefined;
+  CreateTransaction: undefined;
 };
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
@@ -19,8 +19,8 @@ const AppNavigation = () => {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="NewTransaction"
-        component={NewTransactionScreen}
+        name="CreateTransaction"
+        component={CreateTransactionScreen}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
